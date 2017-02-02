@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+body{  font-family: 'Raleway', sans-serif; }
+h1,h2,h3,h4,h5,img,ul,li{ margin: 0px; padding: 0px;}
+
+.M0{ margin: 0px !important;}
+.P0{ padding: 0px !important;}
+
+.MT0{ margin-top: 0px !important;}
+.MT5{ margin-top: 5px !important;}
+.MT10{ margin-top: 10px !important;}
+.MT15{ margin-top: 15px !important;}
+.MT20{ margin-top: 20px !important;}
+.MT30{ margin-top: 30px !important;}
+.MT40{ margin-top: 40px !important;}
+.MT50{ margin-top: 50px !important;}
+.MT60{ margin-top: 60px !important;}
+.MT70{ margin-top: 70px !important;}
+.MT80{ margin-top: 80px !important;}
+.MT90{ margin-top: 90px !important;}
+.MT100{ margin-top: 100px !important;}
+
+.MB0{ margin-bottom: 0px !important;}
+.MB5{ margin-bottom: 5px !important;}
+.MB10{ margin-bottom: 10px !important;}
+.MB15{ margin-bottom: 15px !important;}
+.MB20{ margin-bottom: 20px !important;}
+.MB30{ margin-bottom: 30px !important;}
+.MB40{ margin-bottom: 40px !important;}
+.MB50{ margin-bottom: 50px !important;}
+.MB60{ margin-bottom: 60px !important;}
+.MB70{ margin-bottom: 70px !important;}
+.MB80{ margin-bottom: 80px !important;}
+.MB90{ margin-bottom: 90px !important;}
+.MB100{ margin-bottom: 100px !important;}
+
+.ML0{ margin-left: 0px !important;}
+.ML5{ margin-left: 5px !important;}
+.ML10{ margin-left: 10px !important;}
+.ML15{ margin-left: 15px !important;}
+.ML20{ margin-left: 20px !important;}
+.ML30{ margin-left: 30px !important;}
+.ML40{ margin-left: 40px !important;}
+.ML50{ margin-left: 50px !important;}
+.ML60{ margin-left: 60px !important;}
+.ML70{ margin-left: 70px !important;}
+.ML80{ margin-left: 80px !important;}
+.ML90{ margin-left: 90px !important;}
+.ML100{ margin-left: 100px !important;}
+
+.MR0{ margin-right: 0px !important;}
+.MR5{ margin-right: 5px !important;}
+.MR10{ margin-right: 10px !important;}
+.MR15{ margin-right: 15px !important;}
+.MR20{ margin-right: 20px !important;}
+.MR30{ margin-right: 30px !important;}
+.MR40{ margin-right: 40px !important;}
+.MR50{ margin-right: 50px !important;}
+.MR60{ margin-right: 60px !important;}
+.MR70{ margin-right: 70px !important;}
+.MR80{ margin-right: 80px !important;}
+.MR90{ margin-right: 90px !important;}
+.MR100{ margin-right: 100px !important;}
+
+
+.PT0{ padding-top: 0px !important;}
+.PT5{ padding-top: 5px !important;}
+.PT10{ padding-top: 10px !important;}
+.PT15{ padding-top: 15px !important;}
+.PT20{ padding-top: 20px !important;}
+.PT30{ padding-top: 30px !important;}
+.PT40{ padding-top: 40px !important;}
+.PT50{ padding-top: 50px !important;}
+.PT60{ padding-top: 60px !important;}
+.PT70{ padding-top: 70px !important;}
+.PT80{ padding-top: 80px !important;}
+.PT90{ padding-top: 90px !important;}
+.PT100{ padding-top: 100px !important;}
+
+.PB0{ padding-bottom: 0px !important;}
+.PB5{ padding-bottom: 5px !important;}
+.PB10{ padding-bottom: 10px !important;}
+.PB15{ padding-bottom: 15px !important;}
+.PB20{ padding-bottom: 20px !important;}
+.PB30{ padding-bottom: 30px !important;}
+.PB40{ padding-bottom: 40px !important;}
+.PB50{ padding-bottom: 50px !important;}
+.PB60{ padding-bottom: 60px !important;}
+.PB70{ padding-bottom: 70px !important;}
+.PB80{ padding-bottom: 80px !important;}
+.PB90{ padding-bottom: 90px !important;}
+.PB100{ padding-bottom: 100px !important;}
+
+.PL0{ padding-left: 0px !important;}
+.PL5{ padding-left: 5px !important;}
+.PL10{ padding-left: 10px !important;}
+.PL15{ padding-left: 15px !important;}
+.PL20{ padding-left: 20px !important;}
+.PL30{ padding-left: 30px !important;}
+.PL40{ padding-left: 40px !important;}
+.PL50{ padding-left: 50px !important;}
+.PL60{ padding-left: 60px !important;}
+.PL70{ padding-left: 70px !important;}
+.PL80{ padding-left: 80px !important;}
+.PL90{ padding-left: 90px !important;}
+.PL100{ padding-left: 100px !important;}
+
+.PR0{ padding-right: 0px !important;}
+.PR5{ padding-right: 5px !important;}
+.PR10{ padding-right: 10px !important;}
+.PR15{ padding-right: 15px !important;}
+.PR20{ padding-right: 20px !important;}
+.PR30{ padding-right: 30px !important;}
+.PR40{ padding-right: 40px !important;}
+.PR50{ padding-right: 50px !important;}
+.PR60{ padding-right: 60px !important;}
+.PR70{ padding-right: 70px !important;}
+.PR80{ padding-right: 80px !important;}
+.PR90{ padding-right: 90px !important;}
+.PR100{ padding-right: 100px !important;}
+
+.cursor{ cursor: pointer !important;}
+a:hover, a:focus, a:active{ outline: none !important;}
+.tooltip-inner{ background: #234156; padding: 8px 12px; max-width: 250px; font-size: 16px; }
+.tooltip-arrow{ border-bottom-color: #234156 !important;}
+.form-control{ border-radius: 0px;}

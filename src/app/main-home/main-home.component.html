@@ -1,0 +1,514 @@
+<div class="container search-section">
+  <div class="col-sm-12 text-center">
+    <h2>TOP EXPERTS FOR YOUR CONDITION</h2>
+  </div>
+  <div class="col-sm-12 search-tabs text-center MB20">
+    <div class="arrow-hint">
+      <div class="icon icon-arrow-hint animated-arrow-1"><i class="fa fa-angle-right fa-lg"></i></div>
+      <div class="icon icon-arrow-hint animated-arrow-2"><i class="fa fa-angle-right fa-lg"></i></div>
+    </div>
+    <div class="search-links">
+      <a class="active" [tooltip]="searchTypeOne">Doctors <!--<tooltip-content #searchTypeOne [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
+      <a (click)="urgentCare()" [tooltip]="searchTypeTwo">Urgent Care <!--<tooltip-content #searchTypeTwo [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
+      <a [tooltip]="searchTypeThree">Emergency Room<!-- <tooltip-content #searchTypeThree [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
+      <a [tooltip]="searchTypeFour">Dentist <!--<tooltip-content #searchTypeFour [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="search-label-bar clearfix">
+    <div class="col-xs-12 col-sm-7 col-lg-7 alpha">
+      <label class="search-label search-by-link" label-type="doctor">Speciality, Name, Condition or Procedure</label>
+    </div>
+
+    <div class="col-xs-12 col-sm-5 col-lg-5 alpha">
+      <label class="search-label">Choose location</label>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="home-search-inner">
+      <div class="col-xs-12 col-sm-7 col-lg-7 alpha search-devider P0">
+        <form>
+          <input class="select_focus dropdown-toggle form-control ud-textbx-large" placeholder="e.g. Gastroenterology">
+        </form>
+      </div>
+
+      <div class="col-xs-12 col-sm-5 col-lg-5 alpha">
+        <div class="ud-find-toggle">
+          <span class="dropdown-toggle">
+              <input class="form-control ellipstext" placeholder="City, State or Zip Code" type="text">
+          </span>
+          <div class="map-marker">
+            <i class="fa fa-map-marker fa-lg"></i>
+          </div>
+          <div class="current-marker">
+            <i class="fa fa-location-arrow"></i>
+          </div>
+        </div>
+      </div>
+      <a class="btn-find-big"> GO </a>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="steps-main">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-lg-3 text-center circle-info">
+          <h3><span>1</span> Choose a Top Specialist</h3>
+          <p>Choose a Top Doctor </p>
+          <div class="icon-step"><i class="fa fa-search"></i></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6 text-center circle-info">
+          <h3><span>2</span> Verify Insurance, Add medical records</h3>
+          <p>Online Scheduling </p>
+          <div class="icon-step"><i class="fa fa-cloud-upload MT5"></i></div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-lg-3 text-center circle-info">
+          <h3><span>3</span> Book Online</h3>
+          <p>What's your Time Worth?</p>
+          <div class="icon-step"><i class="fa fa-send"></i></div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<div class="recomend-row">
+  <div class="or-square-box">OR Start Below</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-12 text-to-me-left">
+        <div class="tabs-style-topline-wrap">
+          <div class="start-arrow"><img src="https://www.uberdok.com/assets/images/start-here.png"></div>
+          <div class="slide-title-new">Take Charge of your Health  </div>
+          <div class="tabs-style-topline relative">
+          <ul>
+            <li (click)="annualCheckup()">
+              <a class="active icon" id="annualText">Annual Checkup</a>
+            </li>
+            <li (click)="symptopChecker()">
+              <a class="icon" id="symptomText">Symptom Checker</a>
+            </li>
+          </ul>
+          <div class="content-wrap clearfix">
+            <div *ngIf="annualCheckupDiv" class="content-tab">
+              <div class="symptom-result symptom-lbl-min-width">
+                <form>
+                  <div class="row ud-epss-popup ud-search-diagnos">
+                    <div>
+                      <div class="form-group row">
+                        <div class="gender-symptom-chekr">
+                          <small>Age: </small>
+                          <div class="symptom-age text-left blinking-cursor">
+                            <input type="text" class="form-control blinking-input" placeholder="Enter Your age*" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="gender-symptom-chekr">
+                          <small>Tobacco User: </small>
+                          <div class="switch-toggles">
+                            <input name="test_tobacoo" value="yes" id="tobacko-yes" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-on" for="tobacko-yes">Yes </label>
+                            <input checked="checked" name="test_tobacoo" value="no" id="tobaco-no" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-off" for="tobaco-no">  No </label>
+                            <span class="switch-toggle-active"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="gender-symptom-chekr">
+                          <small>Gender: </small>
+                          <div class="switch-toggles">
+                            <input name="test_sex" id="test_sexF" value="Female" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-on" for="test_sexF">Female </label>
+                            <input name="test_sex" id="test_sexM" checked="checked" value="Male" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-off" for="test_sexM"> Male </label>
+                            <span class="switch-toggle-active"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="gender-symptom-chekr">
+                          <small>Pregnancy:  </small>
+                          <div class="switch-toggles">
+                            <input disabled="disabled" name="view2" value="Yes" id="pregnancy-yes" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-on" for="pregnancy-yes">Yes </label>
+                            <input disabled="disabled" name="view2" value="No" id="pregnancy-no" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-off" for="pregnancy-no"> No </label>
+                            <span class="switch-toggle-active"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="gender-symptom-chekr">
+                          <small>Sexually Active:  </small>
+                          <div class="switch-toggles">
+                            <input name="test_sexually_active" value="yes" id="sactive-yes" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-on" for="sactive-yes">Yes </label>
+                            <input name="test_sexually_active" checked="checked" value="no" id="sactive-no" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-off" for="sactive-no"> No </label>
+                            <span class="switch-toggle-active"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-sm-12">
+                          <div class="col-sm-12">
+                            <a class="btn btn-danger btn-RSN btn-block epss-get-result">GET TESTED NOW</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="clearfix"></div>
+              <div class="symptom-form-slogan">
+                <a class="link-epss site_leaving_link" href="">Preventive Services Covered by Private Health Plans under the Affordable Care Act. &nbsp;  <span class="text-red"> $0 Deductible.</span></a>
+                <a class="link-epss MT5 site_leaving_link" href="">More about the checklist</a>
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div *ngIf="symptopCheckerDiv">
+              <div class="symptom-result symptom-lbl-min-width">
+                <form>
+                  <div class="row ud-epss-popup ud-search-diagnos">
+                    <div>
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <div class="gender-symptom-chekr">
+                            <div class="col-md-12">
+                              <div class="col-md-12">
+                                <input type="text" class="form-control blinking-input" value="Enter 3-5 Symptoms to get a list of possible Diagnosis*" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <div class="gender-symptom-chekr">
+                                <select class="form-control">
+                                  <option>Travel History*</option>
+                                  <option>North America</option>
+                                  <option>Western America</option>
+                                  <option>Africa</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-md-12">
+                            <div class="col-md-12">
+                              <div class="gender-symptom-chekr">
+                                <select class="form-control">
+                                  <option>Select age group*</option>
+                                  <option>adult(30-39 years)</option>
+                                  <option>adult(40-49 years)</option>
+                                  <option>adult(50-59 years)</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="gender-symptom-chekr">
+                          <small>Gender: </small>
+                          <div class="switch-toggles">
+                            <input name="test_sex" id="test_sexF" value="Female" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-on" for="test_sexF">Female </label>
+                            <input name="test_sex" id="test_sexM" checked="checked" value="Male" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-off" for="test_sexM"> Male </label>
+                            <span class="switch-toggle-active"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="gender-symptom-chekr">
+                          <small>Pregnancy:  </small>
+                          <div class="switch-toggles">
+                            <input disabled="disabled" name="view2" value="Yes" id="pregnancy-yes" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-on" for="pregnancy-yes">Yes </label>
+                            <input disabled="disabled" name="view2" value="No" id="pregnancy-no" class="switch-toggle-radio" type="radio">
+                            <label class="switch-toggle-label switch-toggle-off" for="pregnancy-no"> No </label>
+                            <span class="switch-toggle-active"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-sm-12">
+                          <div class="col-sm-12">
+                            <a class="btn btn-danger btn-RSN btn-block epss-get-result"> See Diagnosis, Then Choose Care</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="clearfix"></div>
+              <div class="symptom-form-slogan text-center">
+                <h3>Find, Choose and Book</h3>
+                Emergency Room, Urgent Care, Doctor, or Telemedicine
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="text-to-me">
+          <div class="phonenumber-area">
+            <div class="form-group teliphone-input">
+              <input placeholder="Your phone number" class="form-control sms_mobile_num" type="tel">
+              <div class="flag-dropdown">
+                <div class="selected-flag">
+                  <div class="iti-flag in"></div>
+                  <div class="arrow"></div>
+                </div>
+                <span class="dial-code-view dc .dial-code">+91</span>
+                <ul class="country-list bootstrap-select hide">
+                  <li class="country preferred">
+                    <div class="iti-flag br" data-code="br"></div>
+                    <span class="country-name">BRAZIL</span>
+                    <span class="dial-code">+55</span>
+                  </li>
+                  <li class="country preferred">
+                    <div class="iti-flag ca" data-code="ca"></div>
+                    <span class="country-name">CANADA</span>
+                    <span class="dial-code">+1</span>
+                  </li>
+                  <li class="country preferred">
+                    <div class="iti-flag in" data-code="in"></div>
+                    <span class="country-name">INDIA</span>
+                    <span class="dial-code">+91</span>
+                  </li>
+                  <li class="country preferred">
+                    <div class="iti-flag us" data-code="us"></div>
+                    <span class="country-name">UNITED STATES</span>
+                    <span class="dial-code">+1</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-group">
+              <a class="btn sms_link_btn">Send link to any phone</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="best-hospital-search">
+  <div class="container">
+    <div class="hospital-search-title">
+      <h2>Find a Best hospital</h2>
+    </div>
+    <div class="hospital-search-form">
+      <div class="radio-tab-toggle">
+        <input class="form-control-radio" checked="checked" value="adults" type="radio" />
+        <label class="radio-tab-toggle-label usnews-health active" id="boxOne" (click)="leapfrogDiv()">
+          <img src="https://www.uberdok.com/assets/img/USNews_BestHospitalsRankings_Logo.png" />
+        </label>
+        <input class="form-control-radio" checked="checked" value="pediatric" type="radio" />
+        <label class="radio-tab-toggle-label leaffrog" id="boxTwo" (click)="usnewsDiv()">
+          <img src="https://www.uberdok.com/assets/img/8054-0182-Award-Logos_TH_0.png" />
+        </label>
+      </div>
+      <div class="usnews-form clearfix" *ngIf="usnews">
+        <a class="tabs-like-btn site_leaving_link" href=""><span>1.</span> Top Hospitals  <i class="fa fa-external-link"></i></a>
+        <a class="tabs-like-btn site_leaving_link" href=""><span>2.</span> Top Pediatric Hospitals <i class="fa fa-external-link"></i></a>
+        <a class="tabs-like-btn site_leaving_link" href=""><span>3.</span> Best Hospitals by State<i class="fa fa-external-link"></i></a>
+      </div>
+      <div class="leapfrog-form clearfix" *ngIf="leapfrog">
+        <a class="tabs-like-btn site_leaving_link" target="_blank" href="#"><span>1.</span> Are all Hospitals alike <i class="fa fa-external-link"></i></a>
+        <a class="tabs-like-btn site_leaving_link" target="_blank" href="#"><span>2.</span> Search Hospitals  <i class="fa fa-external-link"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="recommended-specialist">
+  <div class="container">
+    <div class="text-center owl-top-speciality">
+      <div class="switch-double-lg">
+        <input value="top_recommend_docs" id="top_recommended" name="top_docs_list" class="switch-double-lg-input" checked="" type="radio">
+        <label class="switch-double-lg-label switch-double-lg-on" data-toggle="tooltip" title="" data-original-title="Recommended by other doctors">Recommended Doctors</label>
+        <input value="top_super_exp" id="top_super_expert" name="top_docs_list" class="switch-double-lg-input" type="radio">
+        <label class="switch-double-lg-label switch-double-lg-off" data-toggle="tooltip" title="The very top in their specialty, selected by their experience and  credentials"> Top Experts </label>
+        <span class="switch-double-lg-selection"></span>
+      </div>
+    </div>
+    <p class="text-center text-white">Recommended = Recommend by their peers. Doctors patients may seek them out.<br>
+      Top Experts = These doctors are trained and work at leading health care institutions. They conduct ground breaking research.<br> They are key opinion leaders in their specialty. They write the guidelines and are called upon to talk or provide their opinion on clinical practice guidelines.
+    </p>
+    <div class="recommended-item-load">
+      <div class="owl-carousel recommended-slide owl-loaded owl-theme">
+        <div class="owl-stage-outer">
+          <div class="owl-stage">
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic">
+                    <img class="img-thumbnail" alt="" src="https://www.kwikconsult.com/uploads/doc_img/1487651238.jpg">
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic">
+                    <img class="img-thumbnail" alt="" src="https://www.kwikconsult.com/uploads/doc_img/1528068954.jpg">
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic">
+                    <span>AS</span>
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic">
+                    <img class="img-thumbnail" alt="" src="https://www.kwikconsult.com/uploads/doc_img/1417051699.jpg">
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic bg-feafbc">
+                    <span>RR</span>
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic bg-98ccd7">
+                    <span>SA</span>
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="owl-controls">
+          <div class="owl-nav">
+            <div class="owl-prev">prev</div>
+            <div class="owl-next">next</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-title">
+      <h2>What our users are saying</h2>
+    </div>
+    <div class="testiBx">
+      <div class="testitxt">
+        UberDOK helped us refer a patient with heart problems to a top expert. The patient did not require surgery and is back to being well.
+      </div>
+    </div>
+    <a class="testi-add-btn btn waves-effect waves-button waves-float waves-light">Request help finding a Top Expert </a>
+  </div>
+</div>
+
+<div class="blog-section">
+  <div class="container relative">
+    <h2>
+      <a href="#" class="collepse-section">Blogs <i class="expend-open fa fa-angle-up"></i> </a>
+    </h2>
+    <div class="blog-collapse">
+      <div class="owl-carousel owl-loaded owl-theme">
+        <div class="owl-stage-outer">
+          <div class="owl-stage">
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="blog-wrap">
+                  <div class="blog-overlay">
+                    <h3>Closest Thing to a Wonder Drug-The exercise Pill</h3>
+                  </div>
+                  <div class="blog-title">
+                    <h4 data-toggle="tooltip" title="Closest Thing to a Wonder Drug-The exercise Pill">Closest Thing to a Wonder Drug-The exercise Pill</h4>
+                  </div>
+                  <div class="blog-info">
+                    <p>In a meta-analysis published in the&nbsp;British Medical Journal by&nbsp;Stanford professor&nbsp;John Ioannidis, MD, DSc, culled data from more than 300 clinical trials, representing&nbsp;more than&nbsp;300,000 individual patients. In&nbsp;comparing the effectiveness of exercise with various drug interventions to prevent mortality for patients with coronary heart disease or prediabetes,&nbsp;exercise and drug interventions appeared to have similar effects on mortality. […]</p>
+                    <a class="read-more" href="">Read more </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-controls"></div>
+      </div>
+    </div>
+    <div class="app-store">
+      <div class="phonenumber-area">
+        <div class="input-group intl-tel-input">
+          <input placeholder="Your phone number" class="form-control sms_mobile_num" type="tel">
+          <a class="input-group-addon  btn-primary sms_link_btn">Text a link</a>
+          <div class="flag-dropdown">
+            <div class="selected-flag">
+              <div class="iti-flag in"></div>
+              <div class="arrow"></div>
+            </div>
+            <span class="dial-code-view dc .dial-code">+91</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="how-work-side">
+      <a href="#" class="btn btn-success waves-effect waves-button waves-float waves-light">See how It Works</a>
+    </div>
+  </div>
+</div>

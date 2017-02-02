@@ -1,0 +1,23 @@
+li a{ font-family: "Open Sans",sans-serif !important;}
+.ct-flag{ background: url('../../assets/img/flags.png'); height:11px; width: 16px; display: inline-block; }
+.us-flag{ background-position: -112px -143px;}
+.navbar-brand{ padding: 5px;}
+.navbar-nav > li > a{ padding:0px; font-size: 12px; color: #417C9F; margin: 0px 12px;}
+.navbar-nav > li{ border-right: 1px solid #dddddd; line-height: 15px;}
+.navbar-nav > li:last-child{ border-right: none !important;}
+.collapse.navbar-collapse{ height: 23px !important;}
+.MT3{ margin-top: 3px !important;}
+.navbar.navbar-default{ background: none; border: none;}
+.login-signup a { color: #666 !important; cursor: pointer; line-height: 36px;}
+.login-signup a:hover{ color: #417C9F !important; }
+.login-signup a:before{ position:absolute; bottom:0; left:38%; height:2px; width:0px; background-color:#417C9F; display:block; content:''; transition:0.3s; }
+.login-signup a:hover:before{ left:-10%; width:120%; }
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover{ background: none !important;}
+.india-flag{ background-position: -208px -55px;}
+.dropdown-toggle.otherProject{ display: none; font-size: 13px !important; padding: 8px 20px 13px 18px !important; position: relative; vertical-align: middle; background-position: right;}
+.dropdown-toggle.otherProject:hover:after{ transform: rotate(45deg); transition: transform 0.2s ease 0s;}
+.dropdown-toggle.otherProject:after{ background: url("https://www.uberdok.com/assets/images/products_button.cs.png") no-repeat scroll left 0; content: ""; display: inline-block; height: 15px; position: absolute; right: 0; top: 11px; transition: transform 0.2s ease 0s; vertical-align: middle; width: 15px; }
+.navbar.navbar-default:hover .dropdown-toggle.otherProject{ display: block;}
+.partenrs-menu li.text-left{ padding: 12px; background: #efefef; border-bottom: 1px solid #ddd;}
+.partenrs-menu a{ border: 1px solid #ddd; display: block; margin: 0; min-width: 170px; padding: 15px 0; text-align: center;}
+.partenrs-menu li{ padding: 10px 15px;}
