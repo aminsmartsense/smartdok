@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {document} from "@angular/platform-browser/src/facade/browser";
 
 @Component({
   selector: 'app-main-home',
@@ -11,6 +12,9 @@ export class MainHomeComponent implements OnInit {
   leapfrog = false;
   annualCheckupDiv = true;
   symptopCheckerDiv = false;
+  blogSection = true;
+  loadOne = true;
+  loadTwo = false;
 
   annualCheckup(){
     this.annualCheckupDiv = true;
@@ -57,6 +61,44 @@ export class MainHomeComponent implements OnInit {
   }
 
   urgentCare(){
+  }
+
+  flag = 0;
+
+  blogs(){
+    if(this.flag == 0) {
+      this.blogSection = false;
+      this.flag = 1;
+      document.getElementById('angleUp').style.transform = 'rotate(180deg)';
+    }
+    else{
+      this.blogSection = true;
+      this.flag = 0;
+      document.getElementById('angleUp').style.transform = 'rotate(0deg)';
+    }
+
+  }
+
+  recommendedDoctors(){
+    this.loadOne = true;
+    this.loadTwo = false;
+    document.getElementById('switch').style.transition = '0.2s all ease-in';
+    document.getElementById('switch').style.transform = 'translate(0px,0px)';
+  }
+
+  topExperts(){
+    this.loadOne = false;
+    this.loadTwo = true;
+    document.getElementById('switch').style.transition = '0.2s all ease-in';
+    document.getElementById('switch').style.transform = 'translate(190px,0px)';
+  }
+
+  prev(){
+
+  }
+
+  next(){
+
   }
 
   constructor() { }

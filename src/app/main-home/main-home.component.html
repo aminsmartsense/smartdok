@@ -71,6 +71,7 @@
     </div>
 </div>
 </div>
+
 <div class="recomend-row">
   <div class="or-square-box">OR Start Below</div>
   <div class="container">
@@ -320,9 +321,9 @@
         </label>
       </div>
       <div class="usnews-form clearfix" *ngIf="usnews">
-        <a class="tabs-like-btn site_leaving_link" href=""><span>1.</span> Top Hospitals  <i class="fa fa-external-link"></i></a>
-        <a class="tabs-like-btn site_leaving_link" href=""><span>2.</span> Top Pediatric Hospitals <i class="fa fa-external-link"></i></a>
-        <a class="tabs-like-btn site_leaving_link" href=""><span>3.</span> Best Hospitals by State<i class="fa fa-external-link"></i></a>
+        <a class="tabs-like-btn site_leaving_link"><span>1.</span> Top Hospitals  <i class="fa fa-external-link"></i></a>
+        <a class="tabs-like-btn site_leaving_link"><span>2.</span> Top Pediatric Hospitals <i class="fa fa-external-link"></i></a>
+        <a class="tabs-like-btn site_leaving_link"><span>3.</span> Best Hospitals by State<i class="fa fa-external-link"></i></a>
       </div>
       <div class="leapfrog-form clearfix" *ngIf="leapfrog">
         <a class="tabs-like-btn site_leaving_link" target="_blank" href="#"><span>1.</span> Are all Hospitals alike <i class="fa fa-external-link"></i></a>
@@ -337,16 +338,16 @@
     <div class="text-center owl-top-speciality">
       <div class="switch-double-lg">
         <input value="top_recommend_docs" id="top_recommended" name="top_docs_list" class="switch-double-lg-input" checked="" type="radio">
-        <label class="switch-double-lg-label switch-double-lg-on" data-toggle="tooltip" title="" data-original-title="Recommended by other doctors">Recommended Doctors</label>
+        <label class="switch-double-lg-label switch-double-lg-on" data-toggle="tooltip" title="" data-original-title="Recommended by other doctors" (click)="recommendedDoctors()">Recommended Doctors</label>
         <input value="top_super_exp" id="top_super_expert" name="top_docs_list" class="switch-double-lg-input" type="radio">
-        <label class="switch-double-lg-label switch-double-lg-off" data-toggle="tooltip" title="The very top in their specialty, selected by their experience and  credentials"> Top Experts </label>
-        <span class="switch-double-lg-selection"></span>
+        <label class="switch-double-lg-label switch-double-lg-off" data-toggle="tooltip" title="The very top in their specialty, selected by their experience and  credentials" (click)="topExperts()"> Top Experts </label>
+        <span class="switch-double-lg-selection" id="switch"></span>
       </div>
     </div>
     <p class="text-center text-white">Recommended = Recommend by their peers. Doctors patients may seek them out.<br>
       Top Experts = These doctors are trained and work at leading health care institutions. They conduct ground breaking research.<br> They are key opinion leaders in their specialty. They write the guidelines and are called upon to talk or provide their opinion on clinical practice guidelines.
     </p>
-    <div class="recommended-item-load">
+    <div *ngIf="loadOne" class="recommended-item-load">
       <div class="owl-carousel recommended-slide owl-loaded owl-theme">
         <div class="owl-stage-outer">
           <div class="owl-stage">
@@ -439,6 +440,105 @@
         </div>
         <div class="owl-controls">
           <div class="owl-nav">
+            <div class="owl-prev" (click)="prev()">prev</div>
+            <div class="owl-next" (click)="next()">next</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="loadTwo" class="recommended-item-load">
+      <div class="owl-carousel recommended-slide owl-loaded owl-theme">
+        <div class="owl-stage-outer">
+          <div class="owl-stage">
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic">
+                    <span>AA</span>
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic">
+                    <span>BB</span>
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic">
+                    <span>CC</span>
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic">
+                    <span>DD</span>
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic bg-feafbc">
+                    <span>EE</span>
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="doctor-item recommend_card">
+                  <div class="doctor-item-pic bg-98ccd7">
+                    <span>FF</span>
+                  </div>
+                  <div class="doctor-item-dtl">
+                    <h3>Dr. Stephen Ira Ajl, MD </h3>
+                    <p>Pediatrics</p>
+                    <a class="btn-blank" href="">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="owl-controls">
+          <div class="owl-nav">
             <div class="owl-prev">prev</div>
             <div class="owl-next">next</div>
           </div>
@@ -465,12 +565,44 @@
 <div class="blog-section">
   <div class="container relative">
     <h2>
-      <a href="#" class="collepse-section">Blogs <i class="expend-open fa fa-angle-up"></i> </a>
+      <a (click)="blogs()" class="collepse-section">Blogs <i class="expend-open fa fa-angle-up" id="angleUp"></i> </a>
     </h2>
-    <div class="blog-collapse">
+    <div *ngIf="blogSection" class="blog-collapse">
       <div class="owl-carousel owl-loaded owl-theme">
         <div class="owl-stage-outer">
           <div class="owl-stage">
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="blog-wrap">
+                  <div class="blog-overlay">
+                    <h3>Closest Thing to a Wonder Drug-The exercise Pill</h3>
+                  </div>
+                  <div class="blog-title">
+                    <h4 data-toggle="tooltip" title="Closest Thing to a Wonder Drug-The exercise Pill">Closest Thing to a Wonder Drug-The exercise Pill</h4>
+                  </div>
+                  <div class="blog-info">
+                    <p>In a meta-analysis published in the&nbsp;British Medical Journal by&nbsp;Stanford professor&nbsp;John Ioannidis, MD, DSc, culled data from more than 300 clinical trials, representing&nbsp;more than&nbsp;300,000 individual patients. In&nbsp;comparing the effectiveness of exercise with various drug interventions to prevent mortality for patients with coronary heart disease or prediabetes,&nbsp;exercise and drug interventions appeared to have similar effects on mortality. […]</p>
+                    <a class="read-more" href="">Read more </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned">
+              <div class="item">
+                <div class="blog-wrap">
+                  <div class="blog-overlay">
+                    <h3>Closest Thing to a Wonder Drug-The exercise Pill</h3>
+                  </div>
+                  <div class="blog-title">
+                    <h4 data-toggle="tooltip" title="Closest Thing to a Wonder Drug-The exercise Pill">Closest Thing to a Wonder Drug-The exercise Pill</h4>
+                  </div>
+                  <div class="blog-info">
+                    <p>In a meta-analysis published in the&nbsp;British Medical Journal by&nbsp;Stanford professor&nbsp;John Ioannidis, MD, DSc, culled data from more than 300 clinical trials, representing&nbsp;more than&nbsp;300,000 individual patients. In&nbsp;comparing the effectiveness of exercise with various drug interventions to prevent mortality for patients with coronary heart disease or prediabetes,&nbsp;exercise and drug interventions appeared to have similar effects on mortality. […]</p>
+                    <a class="read-more" href="">Read more </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="owl-item cloned">
               <div class="item">
                 <div class="blog-wrap">

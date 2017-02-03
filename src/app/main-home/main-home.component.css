@@ -218,6 +218,7 @@ h2{ font-weight: 300; font-size: 36px; color: #333; margin-bottom: 60px;}
 .blog-overlay{ display:block; margin:0; padding:20px; width:100%; height:100%; position:absolute; left:0; bottom:0; background:rgba(52,52,52,0.9); text-align:center; transition:all 0.5s ease-in-out; z-index:1;}
 .blog-overlay h3{ color:#fff; margin-top:60px; line-height:45px;  }
 .blog-collapse{ display:block;}
+.owl-item.cloned:hover .blog-overlay{ transform: translate3d(0px, -100%, 0px);}
 
 .get-link { display:block; margin:0; padding:0px;}
 .how-work-side{display:inline-block; position:relative; width:auto;  margin:10px  0 0; padding:0; float:right; }
@@ -256,3 +257,5 @@ h2{ font-weight: 300; font-size: 36px; color: #333; margin-bottom: 60px;}
 .app-store .dial-code-view.dc{ padding-left: 35px !important; }
 .app-store .selected-flag .arrow{ top: 15px !important; left: 30px !important; }
 .app-store .iti-flag.in{ left: 10px !important; }
+.owl-item.cloned{ cursor: pointer; width: 370px; float: left; margin-right: 5px; margin-left: 4px;}
+.container.relative .collepse-section{ cursor: pointer;}
