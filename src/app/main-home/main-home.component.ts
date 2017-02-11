@@ -15,6 +15,16 @@ export class MainHomeComponent implements OnInit {
   blogSection = true;
   loadOne = true;
   loadTwo = false;
+  speciality = true;
+  urgent = false;
+  condition = false;
+  specialityDiv = false;
+  homeDiv = false;
+  conditionsDiv = false;
+  proceduresDiv = false;
+  isActiveButtonSearch : boolean;
+  isBodyOverlay : boolean;
+  expertDetails = false;
 
   annualCheckup(){
     this.annualCheckupDiv = true;
@@ -46,6 +56,50 @@ export class MainHomeComponent implements OnInit {
     document.getElementById("symptomText").style.textDecoration = "underline";
   }
 
+  gastroenterologyFocus(){
+    this.expertDetails = true;
+    this.specialityDiv = true;
+  }
+
+  gastroenterologyFocusOut(){
+    this.expertDetails = false;
+    this.specialityDiv = false;
+  }
+
+  bodyOverlayHidden(){
+    this.isBodyOverlay = false;
+    this.expertDetails = false;
+    this.specialityDiv = false;
+  }
+
+  bySpeciality(){
+    this.specialityDiv = true;
+    this.homeDiv = false;
+    this.conditionsDiv = false;
+    this.proceduresDiv = false;
+  }
+
+  byHome(){
+    this.specialityDiv = false;
+    this.homeDiv = true;
+    this.conditionsDiv = false;
+    this.proceduresDiv = false;
+  }
+
+  forConditions(){
+    this.specialityDiv = false;
+    this.homeDiv = false;
+    this.conditionsDiv = true;
+    this.proceduresDiv = false;
+  }
+
+  forProcedures(){
+    this.specialityDiv = false;
+    this.homeDiv = false;
+    this.conditionsDiv = false;
+    this.proceduresDiv = true;
+  }
+
   usnewsDiv(){
     this.usnews = false;
     this.leapfrog = true;
@@ -58,9 +112,6 @@ export class MainHomeComponent implements OnInit {
     this.leapfrog = false;
     document.getElementById('boxTwo').style.boxShadow = "none";
     document.getElementById('boxOne').style.boxShadow = "0 0 15px #757474";
-  }
-
-  urgentCare(){
   }
 
   flag = 0;
@@ -94,11 +145,36 @@ export class MainHomeComponent implements OnInit {
   }
 
   prev(){
-
+    document.getElementsByClassName('owl-item').style.transform = 'translate(-250px,0px)';
+    document.getElementsByClassName('owl-item').style.transition = '0.2s all ease-in';
   }
 
   next(){
 
+  }
+
+  doctors(){
+    this.speciality = true;
+    this.urgent = false;
+    this.condition = false;
+  }
+
+  urgentCare(){
+    this.speciality = false;
+    this.urgent = true;
+    this.condition = false;
+  }
+
+  emergencyRoom(){
+    this.speciality = false;
+    this.urgent = false;
+    this.condition = true;
+  }
+
+  dentist(){
+    this.speciality = true;
+    this.urgent = false;
+    this.condition = false;
   }
 
   constructor() { }

@@ -20,7 +20,7 @@ h2{ font-weight: 300; font-size: 36px; color: #333; margin-bottom: 60px;}
 .current-marker{ color: #0088cc; cursor: pointer; font-size: 1.3em; height: 16px; position: absolute; right: 10px; text-align: center; top: 10px; width: 14px;}
 .ud-find-toggle span.dropdown-toggle .form-control{ background: rgba(0, 0, 0, 0) none repeat scroll 0 0; border: medium none; border-radius: 0; color: #898989; font-size: 16px; font-weight: 400; height: 40px; padding: 3px 28px 3px 36px;}
 .ud-textbx-large{background: #fff none repeat scroll 0 0; border: medium none; border-radius: 0; color: #898989; font-size: 16px; font-weight: 400; height: 40px; margin: 0; padding: 2px 35px 2px 12px; position: relative;}
-.home-search-inner{ margin: 0px 15px !important; margin-top: 3px !important; background: #fff none repeat scroll 0 0; border: 1px solid #0088cc; color: #b7b7b7; display: block; font-size: 14px; line-height: 20px; margin: 0; padding: 0 60px 0 0; position: relative;}
+.home-search-inner{ z-index: 10; margin: 0px 15px !important; margin-top: 3px !important; background: #fff none repeat scroll 0 0; border: 1px solid #0088cc; color: #b7b7b7; display: block; font-size: 14px; line-height: 20px; margin: 0; padding: 0 60px 0 0; position: relative;}
 .btn-find-big{ cursor: pointer; background: #0088cc linear-gradient(to bottom, #00aeef, #1488b3) repeat scroll 0 0; border: medium none; color: #fff; display: block; font-family: "Raleway",sans-serif; font-size: 24px; height: 40px; letter-spacing: normal; line-height: 24px; min-width: 60px; padding: 8px 10px; position: absolute; right: 0; text-align: center; text-decoration: none; text-shadow: 0 1px 0 #02739c; top: 0; margin-right: 0px;}
 .btn-find-big:hover{ background: #087da8 linear-gradient(to bottom, #087da8, #27baf1) repeat scroll 0 0;}
 .search-section input:focus{ box-shadow: none; border: none;}
@@ -259,3 +259,32 @@ h2{ font-weight: 300; font-size: 36px; color: #333; margin-bottom: 60px;}
 .app-store .iti-flag.in{ left: 10px !important; }
 .owl-item.cloned{ cursor: pointer; width: 370px; float: left; margin-right: 5px; margin-left: 4px;}
 .container.relative .collepse-section{ cursor: pointer;}
+.owl-stage{ overflow: hidden;}
+
+
+.search-dropdown-card-pic{ display:inline-block; margin:0 15px 0 0; padding:0px; width:50px; height:50px; vertical-align:top; border-radius:100%; overflow:hidden; float:left; position:relative;}
+.search-dropdown-card-pic > span { font-family: Arial, Helvetica, sans-serif; position: absolute; top: 50%; margin-top: -10px; width: 100%;left: 0;font-size: 14px; color: #fff; text-align:center;}
+.search-dropdown-card-text{ display:block; margin:0; padding:0; vertical-align:top; }
+.search-dropdown-card-text .search-card-col{ display:inline-block; width:30%; vertical-align:top; margin:0; padding:0; color:#454646; font-size:14px; font-weight:400; line-height:20px; }
+.search-dropdown-card-text .search-card-col:first-child{ width:35%; }
+.search-dropdown-card-text .search-card-col + .search-card-col + .search-card-col { width:135px; float:right;}
+.search-dropdown-card-text .search-card-col h4{ display:block; margin:0 0 5px; padding:0; color:#454646; font-size:15px; font-weight:400; line-height:20px; }
+.search-dropdown-card-text .search-card-col p{ display:block; margin:0 0 5px ; padding:0; color:#454646; line-height:20px; }
+.search-dropdown-card-text .search-card-col .degination{ color:#999;}
+.search-dropdown-card-text em,
+.search-dropdown-list-item em{ font-style:normal; font-weight:600;}
+.card-rating .flaticon-rate{ color:#f8a41d;}
+
+.search-dropdown-list-item .ct-list-doc{ color:#464646; padding:0; display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; cursor:pointer;}
+.search-dropdown-list-item .ct-list-doc:hover, .ct-list-doc:focus{ background:none; text-decoration:none; color:#0088cc; }
+.search-dropdown-section-list .searching-loader{ display:block; min-height: 100px; text-align:center;background:url(../images/loading.gif) center center no-repeat rgba(255, 255, 255, 0.9);}
+
+.search-option{ width: 100%;}
+.search-option ul li{ width: 25%;}
+.search-option .tabs-style-topline{ border: none; margin-top: 2px;}
+.activeButtonSearch{ background-color: #fff !important; color: black !important; font-size: 18px !important; text-decoration: underline !important; box-shadow: none !important;}
+.bodyOverlay{ position: fixed; background: rgba(0,0,0,0.5); left: 0; top: 0; width: 100%; height: 100%; z-index: 9; }
+.search-option, .col-sm-12.search-tabs.text-center.MB20{ z-index: 10;}
+.specility-order-list li{ display: block; list-style: none; float: left;}
+.specility-order-list li div{ padding: 10px; font-size: 16px; cursor: pointer; border: 1px solid #FBFBFB;}
+.specility-order-list li div:hover{ border: 1px solid #ffcc00; background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #eae2c7 0%, #fffcf3 50%, #ece9df 100%) repeat scroll 0 0; box-shadow: 0 0 0 1px #ffca02 inset;}

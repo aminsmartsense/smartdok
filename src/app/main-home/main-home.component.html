@@ -1,3 +1,4 @@
+<div  [ngClass]="{ 'bodyOverlay' : isBodyOverlay}" (click)="bodyOverlayHidden()"></div>
 <div class="container search-section">
   <div class="col-sm-12 text-center">
     <h2>TOP EXPERTS FOR YOUR CONDITION</h2>
@@ -8,16 +9,18 @@
       <div class="icon icon-arrow-hint animated-arrow-2"><i class="fa fa-angle-right fa-lg"></i></div>
     </div>
     <div class="search-links">
-      <a class="active" [tooltip]="searchTypeOne">Doctors <!--<tooltip-content #searchTypeOne [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
+      <a class="active" (click)="doctors()" [tooltip]="searchTypeOne">Doctors <!--<tooltip-content #searchTypeOne [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
       <a (click)="urgentCare()" [tooltip]="searchTypeTwo">Urgent Care <!--<tooltip-content #searchTypeTwo [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
-      <a [tooltip]="searchTypeThree">Emergency Room<!-- <tooltip-content #searchTypeThree [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
-      <a [tooltip]="searchTypeFour">Dentist <!--<tooltip-content #searchTypeFour [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
+      <a (click)="emergencyRoom()" [tooltip]="searchTypeThree">Emergency Room<!-- <tooltip-content #searchTypeThree [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
+      <a [tooltip]="searchTypeFour" (click)="dentist()">Dentist <!--<tooltip-content #searchTypeFour [animation]="true" placement="top">Lorem Ipsum</tooltip-content>--></a>
     </div>
   </div>
   <div class="clearfix"></div>
   <div class="search-label-bar clearfix">
     <div class="col-xs-12 col-sm-7 col-lg-7 alpha">
-      <label class="search-label search-by-link" label-type="doctor">Speciality, Name, Condition or Procedure</label>
+      <label class="search-label search-by-link" *ngIf="speciality">Speciality, Name, Condition or Procedure</label>
+      <label class="search-label search-by-link" *ngIf="urgent">Search Urgent care Name</label>
+      <label class="search-label search-by-link" *ngIf="condition">Search Condition</label>
     </div>
 
     <div class="col-xs-12 col-sm-5 col-lg-5 alpha">
@@ -29,7 +32,7 @@
     <div class="home-search-inner">
       <div class="col-xs-12 col-sm-7 col-lg-7 alpha search-devider P0">
         <form>
-          <input class="select_focus dropdown-toggle form-control ud-textbx-large" placeholder="e.g. Gastroenterology">
+          <input class="select_focus dropdown-toggle form-control ud-textbx-large" placeholder="e.g. Gastroenterology" (focus)="isBodyOverlay = !isBodyOverlay; gastroenterologyFocus()" on-focusout="gastroenterologyFocusOut()">
         </form>
       </div>
 
@@ -48,6 +51,116 @@
       </div>
       <a class="btn-find-big"> GO </a>
       <div class="clearfix"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-12 text-to-me-left">
+        <div class="col-md-12 tabs-style-topline-wrap search-option">
+          <div class="tabs-style-topline relative" >
+            <ul *ngIf="expertDetails">
+              <li (click)="bySpeciality(); isActiveButtonSearch= !isActiveButtonSearch">
+                <a class="active icon" id="speciality" [ngClass]="{'activeButtonSearch': isActiveButtonSearch }">By Speciality <span>(5)</span></a>
+              </li>
+              <li (click)="byHome()">
+                <a class="icon" id="home">By Home <span>(217,640)</span></a>
+              </li>
+              <li (click)="forConditions()">
+                <a class="active icon" id="conditions">For Conditions <span>(1,647)</span></a>
+              </li>
+              <li (click)="forProcedures()">
+                <a class="icon" id="procedures">For Procedures <span>(5,415)</span></a>
+              </li>
+            </ul>
+            <div class="content-wrap clearfix">
+              <div *ngIf="specialityDiv" class="content-tab">
+                <ul class="specility-order-list">
+                  <li>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                  </li>
+                  <li>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                  </li>
+                  <li>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                  </li>
+                  <li>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                    <div>search-dropdown-list-item</div>
+                    <div>Allergy and Immunology</div>
+                  </li>
+                </ul>
+              </div>
+              <div *ngIf="homeDiv">
+                <section class="search-dropdown-sections tab-pane fade active in">
+                  <div class="search-dropdown-section-list">
+                    <div data-type="doctors" data-title=" Lea Martinez" class=" search-dropdown-list-card clearfix" data-key="npi" data-value="1144539032">
+                    <div class="search-dropdown-card-pic" style="overflow:hidden;background:#abdcd6;">
+                      <span>EL</span>
+                    </div>
+                    <div class="search-dropdown-card-text">
+                      <div class="search-card-col first">
+                        <h4>
+                          <em>Lea</em> Martinez
+                          <span class="degination">RPT</span>
+                        </h4>
+                        <p>Physical Therapist</p>
+                      </div>
+                      <div class="search-card-col">
+                        <p>New York, NY 10002</p>
+                        <p><i class="fa fa-map-pin yellow"></i> 0.00 Miles</p>
+                      </div>
+                      <div class="search-card-col">
+                        <p class="card-rating">
+                          <span class="flaticon flaticon-web39"></span>
+                          <span class="flaticon flaticon-web39"></span>
+                          <span class="flaticon flaticon-web39"></span>
+                          <span class="flaticon flaticon-web39"></span>
+                          <span class="flaticon flaticon-web39"></span>
+                        </p>
+                        <a class="btn btn-sm btn-success book-appoint">Appointment</a>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </section>
+              </div>
+              <div *ngIf="conditionsDiv">
+                conditionsDiv
+              </div>
+              <div *ngIf="proceduresDiv">
+                proceduresDiv
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
     </div>
 
     <div class="steps-main">
