@@ -25,6 +25,8 @@ export class MainHomeComponent implements OnInit {
   isActiveButtonSearch : boolean;
   isBodyOverlay : boolean;
   expertDetails = false;
+  istopAbs : boolean;
+  isDisplayBlock : boolean;
 
   annualCheckup(){
     this.annualCheckupDiv = true;
@@ -175,6 +177,11 @@ export class MainHomeComponent implements OnInit {
     this.speciality = true;
     this.urgent = false;
     this.condition = false;
+  }
+
+  closeSearch(){
+    this.expertDetails = false;
+    this.specialityDiv = false;
   }
 
   constructor() { }
